@@ -29,6 +29,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // Active navigation link highlighting
 window.addEventListener('scroll', () => {
+    const currentPage = window.location.pathname;
+    
+    // Skip active link changes for pages with custom navbar styling
+    if (currentPage.includes('events.html') || currentPage.includes('about.html')) {
+        return;
+    }
+    
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
     
@@ -49,9 +56,16 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Navbar background change on scroll
+// Navbar background change on scroll (only for pages without custom navbar styling)
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
+    const currentPage = window.location.pathname;
+    
+    // Skip navbar background changes for pages with custom navbar styling
+    if (currentPage.includes('events.html') || currentPage.includes('about.html')) {
+        return;
+    }
+    
     if (window.scrollY > 100) {
         navbar.style.background = 'rgba(255, 255, 255, 0.9)';
         navbar.style.boxShadow = '0 2px 20px rgba(39, 49, 173, 0.15)';

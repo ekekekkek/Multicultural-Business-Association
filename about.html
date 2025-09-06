@@ -26,6 +26,76 @@
         .navbar .nav-logo span {
             color: white !important;
         }
+
+        /* Collaborations Section Styles */
+        .collaborations-section {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .logo-carousel {
+            position: relative;
+            overflow: hidden;
+            margin-top: 3rem;
+        }
+
+        .logo-track {
+            display: flex;
+            animation: scroll 51s linear infinite;
+            width: max-content;
+        }
+
+        .logo-track:hover {
+            animation-play-state: paused;
+        }
+
+        .logo-item {
+            flex-shrink: 0;
+            width: 200px;
+            height: 100px;
+            margin: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-item:hover {
+            transform: scale(1.05);
+        }
+
+        .company-logo {
+            max-width: 80%;
+            max-height: 80%;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-item:hover .company-logo {
+            transform: scale(1.1);
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* Alumni Network Section Styles */
+        .alumni-network-section {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .alumni-network-section h2 {
+            text-align: left;
+            font-size: 2.5rem;
+            color: #2731ad;
+            margin-bottom: 3rem;
+        }
     </style>
 </head>
 <body>
@@ -139,6 +209,94 @@
         </div>
     </section>
 
+    <!-- Alumni Network Section -->
+    <section class="alumni-network-section">
+        <div class="floating-logo floating-logo-4-5">
+            <img src="assets/Logo.png" alt="MBA Logo" class="floating-logo-img">
+        </div>
+        <div class="container">
+            <h2>[ Alumni Network ]</h2>
+            <div class="logo-carousel">
+                <div class="logo-track">
+                    <!-- First set of company logos where alumni work -->
+                    <div class="logo-item">
+                        <img src="assets/goldman.svg" alt="Goldman Sachs" class="company-logo">
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/jpmc.png" alt="JPMC" class="company-logo">
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/morgan.png" alt="Morgan Stanley" class="company-logo">
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/google.png" alt="Google" class="company-logo">
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/mckinsey.png" alt="McKinsey" class="company-logo">
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/citi.png" alt="Citi" class="company-logo">
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/blackstone.png" alt="Blackstone" class="company-logo">
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/deutsche.jpg" alt="Deutsche Bank" class="company-logo">
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/ibm.png" alt="IBM" class="company-logo">
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/oc&c.jpg" alt="OC&C" class="company-logo">
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/barrel.jpg" alt="Barrel" class="company-logo">
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/cbs.png" alt="Columbia Business School" class="company-logo">
+                    </div>
+                    <!-- Duplicate set for seamless loop -->
+                    <div class="logo-item">
+                        <img src="assets/goldman.svg" alt="Goldman Sachs" class="company-logo">
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/jpmc.png" alt="JPMC" class="company-logo">
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/morgan.png" alt="Morgan Stanley" class="company-logo">
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/google.png" alt="Google" class="company-logo">
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/mckinsey.png" alt="McKinsey" class="company-logo">
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/citi.png" alt="Citi" class="company-logo">
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/blackstone.png" alt="Blackstone" class="company-logo">
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/deutsche.jpg" alt="Deutsche Bank" class="company-logo">
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/ibm.png" alt="IBM" class="company-logo">
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/oc&c.jpg" alt="OC&C" class="company-logo">
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/barrel.jpg" alt="Barrel" class="company-logo">
+                    </div>
+                    <div class="logo-item">
+                        <img src="assets/cbs.png" alt="Columbia Business School" class="company-logo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Executive Board Section -->
     <section class="executive-board-section">
         <div class="floating-logo floating-logo-5">
@@ -149,10 +307,7 @@
             <div class="executive-board-grid">
                 <div class="board-member-card">
                     <div class="member-photo">
-                        <img src="assets/board-member-1.jpg" alt="Cole Gawin" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="photo-placeholder" style="display: none; background: linear-gradient(135deg, #f8f9ff 0%, #e8eaff 100%); height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-user" style="font-size: 1.5rem; color: #9d9cfe;"></i>
-                        </div>
+                        <img src="assets/IMG_5127.JPG" alt="Ethan Fung">
                     </div>
                     <div class="member-info">
                         <h3 class="member-name">Ethan Fung</h3>
@@ -161,10 +316,7 @@
                 </div>
                 <div class="board-member-card">
                     <div class="member-photo">
-                        <img src="assets/board-member-2.jpg" alt="Xinyue Ma" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="photo-placeholder" style="display: none; background: linear-gradient(135deg, #f8f9ff 0%, #e8eaff 100%); height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-user" style="font-size: 1.5rem; color: #9d9cfe;"></i>
-                        </div>
+                        <img src="assets/IMG_5333.JPG" alt="Pallavi Saxena">
                     </div>
                     <div class="member-info">
                         <h3 class="member-name">Pallavi Saxena</h3>
@@ -173,10 +325,7 @@
                 </div>
                 <div class="board-member-card">
                     <div class="member-photo">
-                        <img src="assets/board-member-3.jpg" alt="Bryan Phillips" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="photo-placeholder" style="display: none; background: linear-gradient(135deg, #f8f9ff 0%, #e8eaff 100%); height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-user" style="font-size: 1.5rem; color: #9d9cfe;"></i>
-                        </div>
+                        <img src="assets/hero.jpg" alt="Daniel Romero">
                     </div>
                     <div class="member-info">
                         <h3 class="member-name">Daniel Romero</h3>
@@ -185,10 +334,7 @@
                 </div>
                 <div class="board-member-card">
                     <div class="member-photo">
-                        <img src="assets/board-member-4.jpg" alt="Mohamed Ahmed" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="photo-placeholder" style="display: none; background: linear-gradient(135deg, #f8f9ff 0%, #e8eaff 100%); height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-user" style="font-size: 1.5rem; color: #9d9cfe;"></i>
-                        </div>
+                        <img src="assets/hero.jpeg" alt="Jessica Li">
                     </div>
                     <div class="member-info">
                         <h3 class="member-name">Jessica Li</h3>
@@ -197,10 +343,7 @@
                 </div>
                 <div class="board-member-card">
                     <div class="member-photo">
-                        <img src="assets/board-member-5.jpg" alt="Atticus Kim" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="photo-placeholder" style="display: none; background: linear-gradient(135deg, #f8f9ff 0%, #e8eaff 100%); height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-user" style="font-size: 1.5rem; color: #9d9cfe;"></i>
-                        </div>
+                        <img src="assets/barrel.jpg" alt="Owen Teo">
                     </div>
                     <div class="member-info">
                         <h3 class="member-name">Owen Teo</h3>
@@ -209,10 +352,7 @@
                 </div>
                 <div class="board-member-card">
                     <div class="member-photo">
-                        <img src="assets/board-member-6.jpg" alt="Allison Huang" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="photo-placeholder" style="display: none; background: linear-gradient(135deg, #f8f9ff 0%, #e8eaff 100%); height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-user" style="font-size: 1.5rem; color: #9d9cfe;"></i>
-                        </div>
+                        <img src="assets/eugene.jpeg" alt="Eugene Kim">
                     </div>
                     <div class="member-info">
                         <h3 class="member-name">Eugene Kim</h3>
@@ -221,10 +361,7 @@
                 </div>
                 <div class="board-member-card">
                     <div class="member-photo">
-                        <img src="assets/board-member-7.jpg" alt="Ethan Palosh" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="photo-placeholder" style="display: none; background: linear-gradient(135deg, #f8f9ff 0%, #e8eaff 100%); height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-user" style="font-size: 1.5rem; color: #9d9cfe;"></i>
-                        </div>
+                        <img src="assets/oc&c.jpg" alt="Jordan Cancel">
                     </div>
                     <div class="member-info">
                         <h3 class="member-name">Jordan Cancel</h3>
@@ -233,10 +370,7 @@
                 </div>
                 <div class="board-member-card">
                     <div class="member-photo">
-                        <img src="assets/board-member-8.jpg" alt="Amrita Arun" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="photo-placeholder" style="display: none; background: linear-gradient(135deg, #f8f9ff 0%, #e8eaff 100%); height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-user" style="font-size: 1.5rem; color: #9d9cfe;"></i>
-                        </div>
+                        <img src="assets/IMG_5127.JPG" alt="Thomas Rikkerink">
                     </div>
                     <div class="member-info">
                         <h3 class="member-name">Thomas Rikkerink</h3>
@@ -245,10 +379,7 @@
                 </div>
                 <div class="board-member-card">
                     <div class="member-photo">
-                        <img src="assets/board-member-9.jpg" alt="Naysa Bhargava" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="photo-placeholder" style="display: none; background: linear-gradient(135deg, #f8f9ff 0%, #e8eaff 100%); height: 100%; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-user" style="font-size: 1.5rem; color: #9d9cfe;"></i>
-                        </div>
+                        <img src="assets/IMG_5333.JPG" alt="Julia Barg">
                     </div>
                     <div class="member-info">
                         <h3 class="member-name">Julia Barg</h3>
